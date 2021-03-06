@@ -8,6 +8,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaUserCircle,
+  FaYoutube,
 } from 'react-icons/fa';
 import {
   HiOutlineMail,
@@ -31,6 +32,7 @@ const iconSet = {
   messenger: [FaFacebookMessenger, baseColor, ''],
   instagram: [FaInstagram, baseColor, ''],
   linkedin: [FaLinkedin, baseColor, ''],
+  youtube: [FaYoutube, baseColor, ''],
   cart: [HiOutlineShoppingCart, '', baseColor],
 };
 

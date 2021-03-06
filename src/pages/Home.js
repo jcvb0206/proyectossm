@@ -4,6 +4,8 @@ import Icon from '../components/UI/Icon';
 import Button from '../components/UI/Button';
 import Heading from '../components/text/Heading';
 import Header from '../components/containers/Header';
+import Footer from '../components/containers/Footer';
+
 const StyledDiv = styled.div``;
 
 function Home({ history }) {
@@ -45,6 +47,7 @@ function Home({ history }) {
         <Heading type="h3">Hola mundo</Heading>
         <Heading type="h4">Hola mundo</Heading>
       </div>
+      <Footer />
     </StyledDiv>
   );
 }

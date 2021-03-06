@@ -56,9 +56,9 @@ function Header() {
           <div
             css={css`
               display: flex;
-              width: 50%;
+              margin-left: auto;
               align-items: center;
-              justify-content: space-between;
+              gap: 15px;
             `}
           >
             <Button type="ghost">Cursos</Button>
