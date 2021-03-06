@@ -9,7 +9,11 @@ import {
   FaLinkedin,
   FaUserCircle,
 } from 'react-icons/fa';
-import { HiOutlineMail, HiOutlineMailOpen } from 'react-icons/hi';
+import {
+  HiOutlineMail,
+  HiOutlineMailOpen,
+  HiOutlineShoppingCart,
+} from 'react-icons/hi';
 import { RiHome3Line } from 'react-icons/ri';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
 
@@ -27,6 +31,7 @@ const iconSet = {
   messenger: [FaFacebookMessenger, baseColor, ''],
   instagram: [FaInstagram, baseColor, ''],
   linkedin: [FaLinkedin, baseColor, ''],
+  cart: [HiOutlineShoppingCart, '', baseColor],
 };
 
 export default function Icon({ type, fill, stroke, size, onClick }) {
@@ -38,6 +43,7 @@ export default function Icon({ type, fill, stroke, size, onClick }) {
         fill: ${fill || iconFill};
         stroke: ${stroke || iconStroke};
         font-size: ${size}px;
+        cursor: pointer;
       `}
     ></IconToRender>
   );

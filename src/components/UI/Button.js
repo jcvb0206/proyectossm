@@ -10,10 +10,14 @@ const buttonSize = {
 };
 
 const buttonType = {
-  primary: { bgColor: baseColor, border: 'none', color: 'white' },
+  primary: {
+    bgColor: baseColor,
+    border: baseColor,
+    color: 'white',
+  },
   ghost: {
     bgColor: 'transparent',
-    border: `1px solid ${baseColor}`,
+    border: baseColor,
     color: baseColor,
   },
 };
@@ -30,7 +34,7 @@ export default function Button({ type, size, onClick, children }) {
         font-size: ${BtnSize.fontSize}px;
         line-height: ${BtnSize.lineHeight}px;
         background-color: ${BtnType.bgColor};
-        border: ${BtnType.border};
+        border: 1px solid ${BtnType.border};
         color: ${BtnType.color};
         border-radius: 4px;
         cursor: pointer;
