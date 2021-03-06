@@ -84,7 +84,6 @@ function Header() {
           >
             <Button type="ghost">Cursos</Button>
             <Separator />
-            <Button type="ghost">Intranet</Button>
             <Button type="ghost">Regístrate</Button>
             <Button>Ingresa</Button>
             <Separator />
