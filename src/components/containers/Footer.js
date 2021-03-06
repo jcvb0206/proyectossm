@@ -22,9 +22,11 @@ const StyledFooter = styled.footer`
 
   .info-section__footer {
     padding: 0 15px;
-    border-left: 1px solid white;
+    border-right: 1px solid white;
+    text-align: right;
     display: flex;
     flex-direction: column;
+    gap: 8px;
 
     a {
       text-decoration: none;
