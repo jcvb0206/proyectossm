@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import logo from '../../assets/psm-logo.svg';
 import Button from '../UI/Button';
 import Icon from '../UI/Icon';
+import Navbar from './Navbar';
 
 const StyledHeader = styled.header`
   .primary__header {
@@ -29,6 +30,7 @@ const StyledHeader = styled.header`
       min-height: 50px;
       display: flex;
       align-items: center;
+      justify-content: center;
       color: white;
     }
   }
@@ -71,11 +73,7 @@ function Header() {
       </div>
       <div className="secondary__header">
         <div className="secondary-container__header">
-          <p>Inicio</p>
-          <p>Nosotros</p>
-          <p>Equipo</p>
-          <p>Proyectos</p>
-          <p>Contactos</p>
+          <Navbar />
         </div>
       </div>
     </StyledHeader>
