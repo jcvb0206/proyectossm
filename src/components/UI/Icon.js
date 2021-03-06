@@ -13,18 +13,20 @@ import { HiOutlineMail, HiOutlineMailOpen } from 'react-icons/hi';
 import { RiHome3Line } from 'react-icons/ri';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
 
+let baseColor = 'rgb(27, 61, 94)';
+
 const iconSet = {
-  home: [RiHome3Line, 'rgb(27, 61, 94)', ''],
-  profile: [FaUserCircle, 'rgb(27, 61, 94)', ''],
-  back: [IoChevronBackOutline, '', 'rgb(27, 61, 94)'],
-  forward: [IoChevronForwardOutline, '', 'rgb(27, 61, 94)'],
-  email: [HiOutlineMail, '', 'rgb(27, 61, 94)'],
-  emailOpen: [HiOutlineMailOpen, '', 'rgb(27, 61, 94)'],
-  facebookSquare: [FaFacebookSquare, 'rgb(27, 61, 94)', ''],
-  facebook: [FaFacebook, 'rgb(27, 61, 94)', ''],
-  messenger: [FaFacebookMessenger, 'rgb(27, 61, 94)', ''],
-  instagram: [FaInstagram, 'rgb(27, 61, 94)', ''],
-  linkedin: [FaLinkedin, 'rgb(27, 61, 94)', ''],
+  home: [RiHome3Line, baseColor, ''],
+  profile: [FaUserCircle, baseColor, ''],
+  back: [IoChevronBackOutline, '', baseColor],
+  forward: [IoChevronForwardOutline, '', baseColor],
+  email: [HiOutlineMail, '', baseColor],
+  emailOpen: [HiOutlineMailOpen, '', baseColor],
+  facebookSquare: [FaFacebookSquare, baseColor, ''],
+  facebook: [FaFacebook, baseColor, ''],
+  messenger: [FaFacebookMessenger, baseColor, ''],
+  instagram: [FaInstagram, baseColor, ''],
+  linkedin: [FaLinkedin, baseColor, ''],
 };
 
 export default function Icon({ type, fill, stroke, size, onClick }) {
