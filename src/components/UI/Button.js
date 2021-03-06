@@ -38,6 +38,13 @@ export default function Button({ type, size, onClick, children }) {
         color: ${BtnType.color};
         border-radius: 4px;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          ${BtnType === buttonType.ghost
+            ? 'background-color: rgba(27, 61, 94, 0.082);'
+            : ''}
+        }
       `}
     >
       {children}
