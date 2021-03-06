@@ -10,13 +10,13 @@ import {
   FaUserCircle,
   FaYoutube,
 } from 'react-icons/fa';
-import {
-  HiOutlineMail,
-  HiOutlineMailOpen,
-  HiOutlineShoppingCart,
-} from 'react-icons/hi';
+import { HiOutlineMail, HiOutlineMailOpen } from 'react-icons/hi';
 import { RiHome3Line } from 'react-icons/ri';
-import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
+import {
+  IoChevronBackOutline,
+  IoChevronForwardOutline,
+  IoCartOutline,
+} from 'react-icons/io5';
 
 let baseColor = 'rgb(27, 61, 94)';
 
@@ -33,7 +33,7 @@ const iconSet = {
   instagram: [FaInstagram, baseColor, ''],
   linkedin: [FaLinkedin, baseColor, ''],
   youtube: [FaYoutube, baseColor, ''],
-  cart: [HiOutlineShoppingCart, '', baseColor],
+  cart: [IoCartOutline, '', '#1D1D1D'],
 };
 
 export default function Icon({ type, fill, stroke, size, onClick }) {

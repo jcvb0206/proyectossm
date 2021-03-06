@@ -36,6 +36,27 @@ const StyledHeader = styled.header`
   }
 `;
 
+const ShoppingCart = styled.div`
+  position: relative;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 800;
+    height: 18px;
+    width: 18px;
+    color: white;
+    background-color: rgb(27, 61, 94);
+    border-radius: 50%;
+  }
+`;
+
 const Separator = styled.div`
   border-right: 1px solid #d9d9d9;
   height: 44px;
@@ -67,7 +88,10 @@ function Header() {
             <Button type="ghost">Regístrate</Button>
             <Button>Ingresa</Button>
             <Separator />
-            <Icon type="cart" size="30" />
+            <ShoppingCart>
+              <Icon type="cart" size="30" />
+              <span>1</span>
+            </ShoppingCart>
           </div>
         </div>
       </div>
