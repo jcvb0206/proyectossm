@@ -1,11 +1,17 @@
+/** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import Icon from './UI/Icon';
 import Button from './UI/Button';
 import Heading from './text/Heading';
+import Form from './containers/Form';
+import Input from './form/Input';
+import Label from './form/Label';
+import SocialLogin from './form/SocialLogin'
 
 export default function Library() {
   return (
-    <div>
+    <div css={css`
+    padding: 30px;`}>
       <Icon type="home" size="30" />
       <Icon type="profile" size="30" />
       <Icon type="back" size="30" />
@@ -39,6 +45,22 @@ export default function Library() {
       <Heading type="h2">Hola mundo</Heading>
       <Heading type="h3">Hola mundo</Heading>
       <Heading type="h4">Hola mundo</Heading>
+      <Form>
+        <h2>¡Hola!</h2>
+        <span>Ingresa a tu cuenta</span>
+
+        <Label>Email</Label>
+        <Input/>
+        <Label>Contraseña</Label>
+        <Input/>
+        <Button>Iniciar sesión</Button>
+        <span>O ingresa mediante</span>
+        <div css={css`display: flex; gap: 12px;`}>
+          <SocialLogin type="facebook"/>
+          <SocialLogin type="google"/>
+          <SocialLogin type="twitter"/>
+        </div>
+      </Form>
     </div>
   );
 }

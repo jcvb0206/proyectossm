@@ -5,6 +5,7 @@ import {
   FaFacebookMessenger,
   FaFacebookSquare,
   FaFacebook,
+  FaTwitter,
   FaInstagram,
   FaLinkedin,
   FaUserCircle,
@@ -17,6 +18,7 @@ import {
   IoChevronForwardOutline,
   IoCartOutline,
 } from 'react-icons/io5';
+import { FcGoogle } from 'react-icons/fc';
 
 let baseColor = 'rgb(27, 61, 94)';
 
@@ -27,10 +29,12 @@ const iconSet = {
   forward: [IoChevronForwardOutline, '', baseColor],
   email: [HiOutlineMail, '', baseColor],
   emailOpen: [HiOutlineMailOpen, '', baseColor],
+  google: [FcGoogle, '', ''],
   facebookSquare: [FaFacebookSquare, baseColor, ''],
-  facebook: [FaFacebook, baseColor, ''],
+  facebook: [FaFacebook, '#3b5998', ''],
   messenger: [FaFacebookMessenger, baseColor, ''],
   instagram: [FaInstagram, baseColor, ''],
+  twitter: [FaTwitter, '#00acee', ''],
   linkedin: [FaLinkedin, baseColor, ''],
   youtube: [FaYoutube, baseColor, ''],
   cart: [IoCartOutline, '', '#1D1D1D'],
