@@ -43,7 +43,7 @@ export default function Button({ type, size, onClick, children }) {
         &:hover {
           ${BtnType === buttonType.ghost
             ? 'background-color: rgba(27, 61, 94, 0.082);'
-            : ''}
+            : 'background-color: rgb(27, 61, 94, 0.85)'}
         }
       `}
     >

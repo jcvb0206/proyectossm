@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 const sizes = {
-  default: { width: '450px' },
-  small: { width: '320px' },
+  default: { width: '420px' },
+  small: { width: '300px' },
 };
 
 const StyledForm = styled.div`
@@ -13,8 +13,9 @@ const StyledForm = styled.div`
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
   align-items: center;
-  padding: 13px;
+  padding: 24px 12px;
 `;
 
 function Form({ children, size }) {

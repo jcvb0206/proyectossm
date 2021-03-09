@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
+// import { css } from '@emotion/react';
 import Icon from '../UI/Icon';
 
 const StyledFooter = styled.footer`

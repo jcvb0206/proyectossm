@@ -11,6 +11,7 @@ const StyledSocialLogin = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.3s;
 
   &:hover {
     background-color: #c1c1d3;

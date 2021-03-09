@@ -48,8 +48,7 @@ export default function Library() {
       <Form>
         <h2>¡Hola!</h2>
         <span>Ingresa a tu cuenta</span>
-
-        <Label>Email</Label>
+        <Label>Usuario / Email</Label>
         <Input/>
         <Label>Contraseña</Label>
         <Input/>
