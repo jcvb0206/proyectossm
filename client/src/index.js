@@ -17,10 +17,11 @@ const globalStyles = css`
 
 const theme = {
   font: {
-    headline: 'Montserrat',
-    body: 'Inter',
+    headline: 'Bebas Neue',
+    body: 'Montserrat',
   },
   color: {
+    blue: 'rgb(27, 61, 94)',
     gray: '#616161',
     lightGray: '#8E8E8E',
     darkGray: '#373737',

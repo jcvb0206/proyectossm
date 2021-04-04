@@ -38,6 +38,7 @@ export default function Library() {
         style={css`
           font-size: 40px;
           line-height: 40px;
+          color: red;
         `}
       >
         Hola mundo
@@ -45,6 +46,7 @@ export default function Library() {
       <Heading type="h2">Hola mundo</Heading>
       <Heading type="h3">Hola mundo</Heading>
       <Heading type="h4">Hola mundo</Heading>
+      <Heading type="h5">Hola mundo</Heading>
       <Form>
         <h2>¡Hola!</h2>
         <span>Ingresa a tu cuenta</span>
