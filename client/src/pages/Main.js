@@ -6,7 +6,7 @@ import Footer from '../components/containers/Footer';
 
 const StyledDiv = styled.div``;
 
-function Home({ history }) {
+function Main({ history }) {
   return (
     <StyledDiv>
       <Header />
@@ -16,4 +16,4 @@ function Home({ history }) {
   );
 }
 
-export default Home;
+export default Main;
