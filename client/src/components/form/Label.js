@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const StyledLabel = styled.label`
-  color: rgb(27, 61, 94);
+  color: ${({ theme }) => theme.color.blue};
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;

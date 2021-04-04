@@ -7,7 +7,7 @@ const StyledInput = styled.input`
   font-weight: normal;
   font-size: 20px;
   line-height: 25px;
-  border: 1px solid rgb(27, 61, 94);
+  border: 1px solid ${({ theme }) => theme.color.blue};
   transition: border 200ms;
   &:focus {
     outline: none;

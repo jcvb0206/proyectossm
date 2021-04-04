@@ -25,7 +25,7 @@ const StyledHeader = styled.header`
   }
   .secondary__header {
     height: 50px;
-    background-color: rgb(27, 61, 94);
+    background-color: ${({ theme }) => theme.color.blue};
 
     .secondary-container__header {
       margin: 0 auto;
@@ -55,7 +55,7 @@ const ShoppingCart = styled.div`
     height: 18px;
     width: 18px;
     color: white;
-    background-color: rgb(27, 61, 94);
+    background-color: ${({ theme }) => theme.color.blue};
     border-radius: 50%;
   }
 `;

@@ -6,7 +6,7 @@ import Icon from '../UI/Icon';
 const StyledFooter = styled.footer`
   font-family: Montserrat;
   color: white;
-  background-color: rgb(27, 61, 94);
+  background-color: ${({ theme }) => theme.color.blue};
 
   .container__footer {
     margin: 0 auto;

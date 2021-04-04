@@ -12,8 +12,9 @@ import SocialLogin from './form/SocialLogin'
 
 export default function Library() {
   return (
-    <div>
+    <>
       <Header/>
+      <main css={css`padding: 30px 0`}>
       <Icon type="home" size="30" />
       <Icon type="profile" size="30" />
       <Icon type="back" size="30" />
@@ -55,7 +56,8 @@ export default function Library() {
           <SocialLogin type="twitter"/>
         </div>
       </Form>
+      </main>
       <Footer/>
-    </div>
+    </>
   );
 }
