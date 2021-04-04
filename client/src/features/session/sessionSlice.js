@@ -1,0 +1,78 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { BASE_URI } from '../../app/config';
+
+export const fetchLogin = createAsyncThunk(
+  'session/fetchLogin',
+  async (credentials) => {
+    console.log(credentials);
+    const response = await fetch(`${BASE_URI}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.errors.message);
+    }
+    console.log(data);
+    return { token: data.token, id: data.id, role: data.role };
+  }
+);
+
+export const fetchLogout = createAsyncThunk(
+  'session/fetchLogout',
+  async (token) => {
+    console.log(token);
+    const response = await fetch(`${BASE_URI}/logout`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    if (!response.ok) {
+      const data = await response.json();
+      throw new Error(data.errors.message);
+    }
+    return true;
+  }
+);
+
+const sessionSlice = createSlice({
+  name: 'session',
+  initialState: {
+    token: sessionStorage.getItem('token'),
+    id: sessionStorage.getItem('id'),
+    error: null,
+  },
+  reducers: {
+    killToken: (state) => {
+      sessionStorage.removeItem('token');
+      state.token = null;
+    },
+  },
+  extraReducers: {
+    [fetchLogout.fulfilled]: (state, action) => {
+      sessionStorage.removeItem('token');
+      state.error = null;
+      state.token = null;
+      state.role = null;
+    },
+    [fetchLogout.rejected]: (state, action) => {
+      state.error = action.error.message;
+    },
+    [fetchLogin.fulfilled]: (state, action) => {
+      state.error = null;
+      state.token = action.payload.token;
+      state.id = action.payload.id;
+      state.role = action.payload.role;
+    },
+    [fetchLogin.rejected]: (state, action) => {
+      state.error = action.error.message;
+    },
+  },
+});
+
+export const { killToken } = sessionSlice.actions;
+export default sessionSlice.reducer;
