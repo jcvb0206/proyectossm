@@ -1,10 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import logo from '../../assets/psm-logo.svg';
-import Button from '../UI/Button';
 import Icon from '../UI/Icon';
 import Navbar from './Navbar';
+import { Button } from '../UI/Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
+import { fetchLogout } from '../../features/session/sessionSlice';
+import logo from '../../assets/psm-logo.svg';
 
 const StyledHeader = styled.header`
   .primary__header {
@@ -63,6 +66,19 @@ const Separator = styled.div`
 `;
 
 function Header() {
+  const history = useHistory();
+  const dispatch = useDispatch();
+  let role = useSelector((state) => state.sessions.role) || null;
+  const token = useSelector((state) => state.sessions.token);
+
+  const goToHome = () => {
+    if (history.location.pathname !== '/') history.push('');
+  };
+
+  const handleLogout = () => {
+    dispatch(fetchLogout(token));
+  };
+
   return (
     <StyledHeader>
       <div className="primary__header">
@@ -72,7 +88,9 @@ function Header() {
             alt="Proyectos San Marcos"
             css={css`
               height: 65px;
+              cursor: pointer;
             `}
+            onClick={goToHome}
           />
           <div
             css={css`
@@ -84,8 +102,18 @@ function Header() {
           >
             <Button type="ghost">Cursos</Button>
             <Separator />
-            <Button type="ghost">Regístrate</Button>
-            <Button>Ingresa</Button>
+            {role === null && (
+              <>
+                <Button type="ghost">Regístrate</Button>
+                <Button>Ingresa</Button>
+              </>
+            )}
+            {role && (
+              <>
+                <Button type="ghost">Mi perfil</Button>
+                <Button onClick={handleLogout}>Salir</Button>
+              </>
+            )}
             <Separator />
             <ShoppingCart>
               <Icon type="cart" size="30" />

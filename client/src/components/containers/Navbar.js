@@ -59,8 +59,8 @@ function Navbar() {
   return (
     <StyledNav>
       <ul>
-        {NavElements.map((element) => (
-          <li>
+        {NavElements.map((element, index) => (
+          <li key={index}>
             <StyledNavButton active={element.active}>
               {element.title}
             </StyledNavButton>

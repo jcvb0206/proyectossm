@@ -1,7 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import Header from './containers/Header';
+import Footer from './containers/Footer';
 import Icon from './UI/Icon';
-import Button from './UI/Button';
+import { Button } from './UI/Button';
 import Heading from './text/Heading';
 import Form from './containers/Form';
 import Input from './form/Input';
@@ -10,8 +12,8 @@ import SocialLogin from './form/SocialLogin'
 
 export default function Library() {
   return (
-    <div css={css`
-    padding: 30px;`}>
+    <div>
+      <Header/>
       <Icon type="home" size="30" />
       <Icon type="profile" size="30" />
       <Icon type="back" size="30" />
@@ -33,16 +35,7 @@ export default function Library() {
       <Button size="big" type="ghost">
         Hola mundo
       </Button>
-      <Heading
-        type="h1"
-        style={css`
-          font-size: 40px;
-          line-height: 40px;
-          color: red;
-        `}
-      >
-        Hola mundo
-      </Heading>
+      <Heading type="h1">Hola mundo</Heading>
       <Heading type="h2">Hola mundo</Heading>
       <Heading type="h3">Hola mundo</Heading>
       <Heading type="h4">Hola mundo</Heading>
@@ -62,6 +55,7 @@ export default function Library() {
           <SocialLogin type="twitter"/>
         </div>
       </Form>
+      <Footer/>
     </div>
   );
 }
