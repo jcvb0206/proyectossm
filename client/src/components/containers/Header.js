@@ -68,8 +68,8 @@ const Separator = styled.div`
 function Header() {
   const history = useHistory();
   const dispatch = useDispatch();
-  let role = useSelector((state) => state.sessions.role) || null;
-  const token = useSelector((state) => state.sessions.token);
+  let role = useSelector((state) => state.session.role) || null;
+  const token = useSelector((state) => state.session.token);
 
   const goToHome = () => {
     if (history.location.pathname !== '/') history.push('');

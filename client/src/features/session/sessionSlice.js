@@ -42,8 +42,9 @@ export const fetchLogout = createAsyncThunk(
 const sessionSlice = createSlice({
   name: 'session',
   initialState: {
-    token: sessionStorage.getItem('token'),
     id: sessionStorage.getItem('id'),
+    role: sessionStorage.getItem('role'),
+    token: sessionStorage.getItem('token'),
     error: null,
   },
   reducers: {

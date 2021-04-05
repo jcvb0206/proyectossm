@@ -41,11 +41,16 @@ function Button({ type, size, onClick, children }) {
         border-radius: 4px;
         cursor: pointer;
         transition: 0.3s;
+        user-select: none;
 
         &:hover {
           ${BtnType === buttonType.ghost
             ? 'background-color: rgba(27, 61, 94, 0.082);'
             : 'background-color: rgb(27, 61, 94, 0.85)'}
+        }
+
+        &:focus {
+          outline: none;
         }
       `}
     >

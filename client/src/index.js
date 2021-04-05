@@ -22,6 +22,8 @@ const theme = {
   },
   color: {
     blue: 'rgb(27, 61, 94)',
+    darkBlue: '#142C45',
+    sky: '#4495EB',
     gray: '#616161',
     lightGray: '#8E8E8E',
     darkGray: '#373737',

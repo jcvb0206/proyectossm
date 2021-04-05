@@ -49,7 +49,6 @@ export default function Heading({ children, type, style }) {
   const HeadingToRender = setHeading[type];
   return (
     <HeadingToRender
-      type={type}
       css={css`
         ${style}
       `}

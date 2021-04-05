@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Body1 } from '../text/Content';
 
 const StyledLabel = styled.label`
   color: ${({ theme }) => theme.color.blue};
@@ -8,7 +9,11 @@ const StyledLabel = styled.label`
 `;
 
 function Label({ children }) {
-  return <StyledLabel>{children}</StyledLabel>;
+  return (
+    <StyledLabel>
+      <Body1>{children}</Body1>
+    </StyledLabel>
+  );
 }
 
 export default Label;

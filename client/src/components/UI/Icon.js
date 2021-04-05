@@ -22,6 +22,8 @@ import {
   RiShoppingCart2Line,
   RiHeartLine,
   RiHeartFill,
+  RiSearchLine,
+  RiUploadLine,
 } from 'react-icons/ri';
 import { FcGoogle } from 'react-icons/fc';
 
@@ -45,6 +47,8 @@ const iconSet = {
   cart: RiShoppingCart2Line,
   heartLine: RiHeartLine,
   heartFill: RiHeartFill,
+  search: RiSearchLine,
+  upload: RiUploadLine,
 };
 
 export default function Icon({ type, fill, stroke, size, style, onClick }) {

@@ -6,9 +6,10 @@ import Icon from './UI/Icon';
 import { Button } from './UI/Button';
 import Heading from './text/Heading';
 import Form from './containers/Form';
-import Input from './form/Input';
+import { Input, InputFile } from './form/Input';
 import Label from './form/Label';
 import SocialLogin from './form/SocialLogin'
+import { Caption } from './text/Content';
 
 export default function Library() {
   return (
@@ -42,20 +43,21 @@ export default function Library() {
       <Heading type="h4">Hola mundo</Heading>
       <Heading type="h5">Hola mundo</Heading>
       <Form>
-        <h2>¡Hola!</h2>
-        <span>Ingresa a tu cuenta</span>
+        <Heading type="h2">¡Hola!</Heading>
+        <Caption>Ingresa a tu cuenta</Caption>
         <Label>Usuario / Email</Label>
         <Input/>
         <Label>Contraseña</Label>
         <Input/>
         <Button>Iniciar sesión</Button>
-        <span>O ingresa mediante</span>
+        <Caption>O ingresa mediante</Caption>
         <div css={css`display: flex; gap: 12px;`}>
           <SocialLogin type="facebook"/>
           <SocialLogin type="google"/>
           <SocialLogin type="twitter"/>
         </div>
       </Form>
+      <InputFile/>
       </main>
       <Footer/>
     </>
